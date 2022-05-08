@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		@font-face{
+			font-family: SegoeUI;
+			src: url(font/SegoeUI.ttf)
+		}
+
+		a.buttonText {
+			color: blue;
+			background-color: #EFE7D0; 
+			text-decoration: none;	
+			outline: none; 
+			font-size: 18px;
+			padding: 1em 2em; 
+			border-radius: 5px;
+			border: 0px
+		}
+		a.buttonText:hover {
+			background-color: #D3C49A;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Сгенерировать случайное число</h1>
+
+	<a href="#" id="button" class="buttonText" onclick="random(1, 10);">сгенерировать</a>
+
+	<br>
+	<br>
+
+	<div class="sum" style="font-size: 18px"></div>
+
+	<script>
+	function random(min, max) {
+  		document.querySelector('.sum').innerHTML = (Math.floor(Math.random() * (max - min + 1) ) + min);
+	}
+	</script>
+</body>
+
+</html>
